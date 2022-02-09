@@ -1,14 +1,16 @@
-$(document).ready(function(){
-   var zoom = 1;
-   $('.zoomIn').click( function(){
-       if(zoom<10){
-        zoom +=0.5;
-        $('#bagImageZoom').css('transform', 'scale('+ zoom +')'); 
-   }});
-    $('.zoomOut').click(function(){
-        if(zoom>1){
-        zoom -=0.5;
-        $('#bagImageZoom').css('transform', 'scale('+ zoom +')');
-        }
+$(document).ready(function () {
+    var zoom1 = 100;
+    $(".zoomIn").click(function () {
+      if (zoom1 < 500) {
+        zoom1 += 25;
+        $("#bagImageZoom").css("zoom",zoom1+"%");
+      }
     });
-});
+    $(".zoomOut").click(function () {
+      if (zoom1 > 100) {
+        zoom1 -= 25;
+        $("#bagImageZoom").css("zoom",zoom1+"%");
+      }
+    });
+  });
+  
